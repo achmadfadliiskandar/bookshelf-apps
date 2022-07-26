@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Bookshelf Apps</title>
+</head>
+<body>
+    <!-- membuat container sebagai dasar halaman web -->
+    <div class="container">
+        <!-- membuat judul/spanduk utama -->
+        <div class="spanduk">
+            <h1>bookshelf apps</h1>
+        </div>
+        <!-- membuat card-body untuk input buku -->
+        <div class="tempatinput">
+            <h2 class="judulkedua">masukkan buku baru</h2>
+            <form class="forminput" id="form">
+                <input type="hidden" name="id" id="id">
+                <!-- membuat halaman judul -->
+                <div class="judul">
+                <label for="judul">judul</label>
+                <input type="text" name="title" id="title" required>
+                </div>
+                <div class="penulis">
+                <label for="penulis">penulis</label>
+                <input type="text" name="author" id="author" required>
+                </div>
+                <div class="tahun">
+                <label for="tahun">tahun</label>
+                <input type="text" name="year" id="year" required>
+                </div>
+                <div class="selesai-dibaca">
+                    <label for="selesai-dibaca">selesai dibaca</label>
+                    <input type="checkbox" name="isComplete" id="isComplete">
+                </div>
+                <button type="button" class="button-submit" id="button-submit" onclick="save()">masukkan buku ke rak <b>belum selesai dibaca</b></button>
+            </form>
+        </div>
+        <!-- tempat search -->
+        <div class="search">
+            <h2 class="judulsearch" id="judulsearch">cari buku (opsional)</h2>
+                <!-- <form> -->
+                    <div class="searchform">
+                    <label for="search" id="judulform">judul</label>
+                    <input type="text" name="search" id="search">
+                    <button class="cari" id="cari" onclick="cari()">cari</button>
+                <!-- </form> -->
+            </div>
+    </div>
+        <!-- tempat belum selesai dibaca -->
+        <div class="belum-selesai-dibaca" id="belum-selesai-dibaca">
+            <h2 class="judulbsd" id="judulbsd">belum selesai dibaca</h2>
+            <div class="cardbelum" id="cardbelum">
+                <!-- <h2>jakarta</h2>
+                <p>penulis : malam minggu</p>
+                <p>tahun: 2004</p>
+                <div class="bagian-button">
+                    <button class="hijau">selesai dibaca</button>
+                    <button class="merah">hapus buku</button>
+                </div> -->
+            </div>
+        </div>
+        <!-- tempat sudah selesai dibaca -->
+        <div class="sudah-selesai-dibaca">
+            <h2 class="judulselesai">selesai dibaca</h2>
+            <div class="cardselesai" id="cardselesai"></div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
